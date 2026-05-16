@@ -1,0 +1,19 @@
+[build]
+  publish = "."
+
+[[redirects]]
+  from = "/shop"
+  to = "/products/"
+  status = 301
+
+[[redirects]]
+  from = "/product/:slug"
+  to = "/products/details.html?slug=:slug"
+  status = 200
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
