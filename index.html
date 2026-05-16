@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fashion Hood – Premium Youth Fashion Brand</title>
+  <meta name="description" content="Fashion Hood – India's premium youth fashion brand. Shop Kurtis, Denims, Tops, Co-ord Sets, Handbags & Jewellery. Free shipping on orders above ₹999. COD available." />
+  <meta name="keywords" content="fashion hood, kurtis online, co-ord sets india, women fashion india, trendy tops, handbags, youth fashion brand" />
+  <meta property="og:title" content="Fashion Hood – Premium Youth Fashion Brand" />
+  <meta property="og:description" content="Shop the latest trends in Kurtis, Denims, Co-ord Sets & more. Free shipping. COD available." />
+  <meta property="og:image" content="assets/og-banner.jpg" />
+  <meta property="og:url" content="https://fashionhood.in" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=DM+Sans:wght@300;400;500;600&family=Bebas+Neue&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'brand-red': '#C8102E',
+            'brand-red-dark': '#9B0B21',
+            'brand-black': '#0a0a0a',
+            'brand-cream': '#FAF7F2',
+            'brand-gold': '#C9A84C',
+          },
+          fontFamily: {
+            'display': ['Cormorant Garamond', 'serif'],
+            'body': ['DM Sans', 'sans-serif'],
+            'accent': ['Bebas Neue', 'cursive'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="bg-brand-black text-white font-body overflow-x-hidden">
+
+<!-- ═══════════════════════════════════════════════════════
+     ANNOUNCEMENT BAR
+═══════════════════════════════════════════════════════ -->
+<div class="announcement-bar bg-brand-red text-white text-center py-2 text-xs tracking-widest uppercase font-medium overflow-hidden">
+  <div class="announcement-scroll whitespace-nowrap inline-block">
+    &nbsp;&nbsp;&nbsp;✦ Free Shipping Above ₹999 &nbsp;&nbsp;✦&nbsp;&nbsp; COD Available Across India &nbsp;&nbsp;✦&nbsp;&nbsp; New Collection Every Week &nbsp;&nbsp;✦&nbsp;&nbsp; Free Shipping Above ₹999 &nbsp;&nbsp;✦&nbsp;&nbsp; COD Available Across India &nbsp;&nbsp;✦&nbsp;&nbsp; New Collection Every Week &nbsp;&nbsp;&nbsp;
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════
+     NAVIGATION
+═══════════════════════════════════════════════════════ -->
+<nav id="navbar" class="fixed top-8 left-0 right-0 z-50 transition-all duration-500">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="nav-glass flex items-center justify-between h-16 px-6 rounded-2xl">
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center gap-2">
+        <div class="logo-circle w-9 h-9 rounded-full bg-brand-red flex items-center justify-center text-white font-accent text-sm tracking-wider">FH</div>
+        <span class="font-display text-xl font-semibold tracking-wide hidden sm:block">Fashion Hood</span>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <div class="hidden md:flex items-center gap-8 text-sm font-medium tracking-wide">
+        <a href="products.html?cat=kurtis" class="nav-link text-gray-300 hover:text-white transition-colors">Kurtis</a>
+        <a href="products.html?cat=denims" class="nav-link text-gray-300 hover:text-white transition-colors">Denims</a>
+        <a href="products.html?cat=tops" class="nav-link text-gray-300 hover:text-white transition-colors">Tops</a>
+        <a href="products.html?cat=coord-sets" class="nav-link text-gray-300 hover:text-white transition-colors">Co-ord Sets</a>
+        <a href="products.html?cat=handbags" class="nav-link text-gray-300 hover:text-white transition-colors">Bags</a>
+        <a href="products.html?cat=jewellery" class="nav-link text-gray-300 hover:text-white transition-colors">Jewellery</a>
+        <a href="products.html?sale=true" class="text-brand-red font-semibold">Sale 🔥</a>
+      </div>
+
+      <!-- Right Icons -->
+      <div class="flex items-center gap-4">
+        <button onclick="toggleSearch()" class="text-gray-300 hover:text-white transition-colors hidden sm:block">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-5.197-5.197M15.803 15.803A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607z"/></svg>
+        </button>
+        <a href="wishlist.html" class="text-gray-300 hover:text-white transition-colors hidden sm:block">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"/></svg>
+        </a>
+        <a href="cart.html" class="relative text-gray-300 hover:text-white transition-colors">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007z"/></svg>
+          <span id="cart-count" class="absolute -top-2 -right-2 bg-brand-red text-white text-xs w-4 h-4 rounded-full flex items-center justify-center font-semibold">0</span>
+        </a>
+        <button onclick="toggleMobileMenu()" class="md:hidden text-gray-300 hover:text-white transition-colors">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div id="mobile-menu" class="fixed inset-0 z-40 hidden">
+  <div class="absolute inset-0 bg-black/80 backdrop-blur-sm" onclick="toggleMobileMenu()"></div>
+  <div class="mobile-menu-panel absolute right-0 top-0 bottom-0 w-4/5 max-w-sm bg-brand-black border-l border-white/10 flex flex-col p-8">
+    <div class="flex items-center justify-between mb-10">
+      <span class="font-display text-2xl font-semibold">Fashion Hood</span>
+      <button onclick="toggleMobileMenu()" class="text-gray-400 hover:text-white">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <nav class="flex flex-col gap-6 text-lg">
+      <a href="products.html" class="text-gray-300 hover:text-white transition-colors border-b border-white/10 pb-4">All Products</a>
+      <a href="products.html?cat=kurtis" class="text-gray-300 hover:text-white transition-colors border-b border-white/10 pb-4">Kurtis</a>
+      <a href="products.html?cat=denims" class="text-gray-300 hover:text-white transition-colors border-b border-white/10 pb-4">Denims</a>
+      <a href="products.html?cat=tops" class="text-gray-300 hover:text-white transition-colors border-b border-white/10 pb-4">Tops</a>
+      <a href="products.html?cat=coord-sets" class="text-gray-300 hover:text-white transition-colors border-b border-white/10 pb-4">Co-ord Sets</a>
+      <a href="products.html?cat=handbags" class="text-gray-300 hover:text-white transition-colors border-b border-white/10 pb-4">Handbags</a>
+      <a href="products.html?cat=jewellery" class="text-gray-300 hover:text-white transition-colors border-b border-white/10 pb-4">Jewellery</a>
+      <a href="products.html?sale=true" class="text-brand-red font-semibold">Sale 🔥</a>
+    </nav>
+    <div class="mt-auto pt-8 border-t border-white/10 flex gap-4">
+      <a href="cart.html" class="flex-1 btn-red text-center py-3 rounded-xl text-sm font-medium">View Cart</a>
+      <a href="wishlist.html" class="flex-1 btn-outline text-center py-3 rounded-xl text-sm font-medium">Wishlist</a>
+    </div>
+  </div>
+</div>
+
+<!-- Search Overlay -->
+<div id="search-overlay" class="fixed inset-0 z-50 hidden">
+  <div class="absolute inset-0 bg-black/90 backdrop-blur-md" onclick="toggleSearch()"></div>
+  <div class="relative z-10 flex flex-col items-center justify-center h-full px-6">
+    <p class="font-display text-gray-400 text-lg mb-6">What are you looking for?</p>
+    <div class="w-full max-w-xl">
+      <input id="search-input" type="text" placeholder="Search kurtis, tops, co-ord sets..." class="w-full bg-white/10 border border-white/20 text-white placeholder-gray-500 px-6 py-4 rounded-2xl text-lg outline-none focus:border-brand-red transition-colors" oninput="liveSearch(this.value)" />
+      <div id="search-results" class="mt-4 bg-white/5 rounded-2xl hidden max-h-64 overflow-y-auto"></div>
+    </div>
+    <button onclick="toggleSearch()" class="mt-6 text-gray-500 hover:text-white text-sm">Press ESC to close</button>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════
+     HERO SECTION
+═══════════════════════════════════════════════════════ -->
+<section id="hero" class="relative min-h-screen flex items-center overflow-hidden">
+  <!-- Particle Canvas -->
+  <canvas id="particles" class="absolute inset-0 w-full h-full pointer-events-none z-10"></canvas>
+
+  <!-- Hero Slides -->
+  <div id="hero-slides" class="absolute inset-0">
+    <!-- Slide 1 -->
+    <div class="hero-slide active absolute inset-0 bg-gradient-to-br from-brand-black via-[#1a0a0e] to-brand-black">
+      <div class="absolute inset-0 bg-[url('assets/hero-1.jpg')] bg-cover bg-center opacity-30"></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-brand-black via-brand-black/60 to-transparent"></div>
+    </div>
+    <!-- Slide 2 -->
+    <div class="hero-slide absolute inset-0 bg-gradient-to-br from-brand-black via-[#1a0a0e] to-brand-black opacity-0">
+      <div class="absolute inset-0 bg-[url('assets/hero-2.jpg')] bg-cover bg-center opacity-30"></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-brand-black via-brand-black/60 to-transparent"></div>
+    </div>
+    <!-- Slide 3 -->
+    <div class="hero-slide absolute inset-0 bg-gradient-to-br from-brand-black via-[#1a0a0e] to-brand-black opacity-0">
+      <div class="absolute inset-0 bg-[url('assets/hero-3.jpg')] bg-cover bg-center opacity-30"></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-brand-black via-brand-black/60 to-transparent"></div>
+    </div>
+  </div>
+
+  <!-- Red glow effect -->
+  <div class="absolute bottom-0 right-0 w-96 h-96 bg-brand-red/20 rounded-full blur-3xl pointer-events-none"></div>
+  <div class="absolute top-1/3 right-1/4 w-64 h-64 bg-brand-red/10 rounded-full blur-3xl pointer-events-none"></div>
+
+  <!-- Hero Content -->
+  <div class="relative z-20 max-w-7xl mx-auto px-6 pt-32 pb-20 w-full">
+    <div class="max-w-2xl">
+      <div class="hero-tag inline-flex items-center gap-2 bg-white/5 border border-white/10 px-4 py-2 rounded-full mb-6 text-xs tracking-widest uppercase text-brand-red font-medium">
+        <span class="w-1.5 h-1.5 rounded-full bg-brand-red animate-pulse"></span>
+        New Collection Dropped
+      </div>
+
+      <h1 class="hero-title font-display text-6xl sm:text-7xl lg:text-8xl xl:text-9xl font-semibold leading-none mb-6">
+        <span class="block text-white">Dress Like</span>
+        <span class="block text-brand-red italic">You Mean It</span>
+      </h1>
+
+      <p class="hero-sub text-gray-400 text-lg sm:text-xl max-w-md mb-8 leading-relaxed font-light">
+        Premium fashion for the modern Indian girl. Kurtis, Co-ord sets, Denims & more – curated for your vibe.
+      </p>
+
+      <div class="hero-btns flex flex-wrap gap-4">
+        <a href="products.html" class="btn-red px-8 py-4 rounded-2xl font-medium text-sm tracking-wide inline-flex items-center gap-2 group">
+          Shop Now
+          <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
+        <a href="products.html?sale=true" class="btn-outline px-8 py-4 rounded-2xl font-medium text-sm tracking-wide">
+          View Sale 🔥
+        </a>
+      </div>
+
+      <!-- Trust badges -->
+      <div class="flex flex-wrap items-center gap-6 mt-12">
+        <div class="flex items-center gap-2 text-gray-500 text-xs">
+          <svg class="w-4 h-4 text-brand-red" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          4.8★ Rated
+        </div>
+        <div class="flex items-center gap-2 text-gray-500 text-xs">
+          <svg class="w-4 h-4 text-brand-red" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10"/></svg>
+          Free Shipping ₹999+
+        </div>
+        <div class="flex items-center gap-2 text-gray-500 text-xs">
+          <svg class="w-4 h-4 text-brand-red" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          COD Available
+        </div>
+        <div class="flex items-center gap-2 text-gray-500 text-xs">
+          <svg class="w-4 h-4 text-brand-red" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+          Easy Returns
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide indicators -->
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-2 z-20">
+    <button class="slide-dot w-6 h-1 rounded-full bg-brand-red transition-all" onclick="goToSlide(0)"></button>
+    <button class="slide-dot w-2 h-1 rounded-full bg-white/30 transition-all" onclick="goToSlide(1)"></button>
+    <button class="slide-dot w-2 h-1 rounded-full bg-white/30 transition-all" onclick="goToSlide(2)"></button>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div class="absolute bottom-8 right-8 z-20 hidden sm:flex flex-col items-center gap-2 text-gray-600">
+    <div class="scroll-line w-px h-16 bg-gradient-to-b from-transparent to-brand-red"></div>
+    <span class="text-xs tracking-[0.2em] uppercase" style="writing-mode:vertical-lr">Scroll</span>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     CATEGORY CARDS
+═══════════════════════════════════════════════════════ -->
+<section class="py-20 px-4 sm:px-6 max-w-7xl mx-auto">
+  <div class="text-center mb-12">
+    <p class="text-brand-red text-xs tracking-[0.3em] uppercase font-medium mb-3">Explore</p>
+    <h2 class="font-display text-4xl sm:text-5xl font-semibold">Shop by Category</h2>
+  </div>
+
+  <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
+    <a href="products.html?cat=kurtis" class="category-card group relative overflow-hidden rounded-2xl aspect-[3/4] bg-gradient-to-br from-[#1a0810] to-[#0d0507]">
+      <div class="absolute inset-0 bg-[url('assets/cat-kurtis.jpg')] bg-cover bg-center opacity-50 group-hover:opacity-70 group-hover:scale-110 transition-all duration-700"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+      <div class="absolute bottom-0 p-4">
+        <h3 class="font-display text-lg font-semibold">Kurtis</h3>
+        <p class="text-xs text-gray-400">From ₹599</p>
+      </div>
+    </a>
+    <a href="products.html?cat=denims" class="category-card group relative overflow-hidden rounded-2xl aspect-[3/4] bg-gradient-to-br from-[#0a0f1a] to-[#05080d]">
+      <div class="absolute inset-0 bg-[url('assets/cat-denims.jpg')] bg-cover bg-center opacity-50 group-hover:opacity-70 group-hover:scale-110 transition-all duration-700"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+      <div class="absolute bottom-0 p-4">
+        <h3 class="font-display text-lg font-semibold">Denims</h3>
+        <p class="text-xs text-gray-400">From ₹799</p>
+      </div>
+    </a>
+    <a href="products.html?cat=tops" class="category-card group relative overflow-hidden rounded-2xl aspect-[3/4] bg-gradient-to-br from-[#1a0a10] to-[#0d0508]">
+      <div class="absolute inset-0 bg-[url('assets/cat-tops.jpg')] bg-cover bg-center opacity-50 group-hover:opacity-70 group-hover:scale-110 transition-all duration-700"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+      <div class="absolute bottom-0 p-4">
+        <h3 class="font-display text-lg font-semibold">Tops</h3>
+        <p class="text-xs text-gray-400">From ₹399</p>
+      </div>
+    </a>
+    <a href="products.html?cat=coord-sets" class="category-card group relative overflow-hidden rounded-2xl aspect-[3/4] bg-gradient-to-br from-[#160a1a] to-[#0a0510]">
+      <div class="absolute inset-0 bg-[url('assets/cat-coord.jpg')] bg-cover bg-center opacity-50 group-hover:opacity-70 group-hover:scale-110 transition-all duration-700"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+      <div class="absolute bottom-0 p-4">
+        <h3 class="font-display text-lg font-semibold">Co-ord Sets</h3>
+        <p class="text-xs text-gray-400">From ₹999</p>
+      </div>
+    </a>
+    <a href="products.html?cat=handbags" class="category-card group relative overflow-hidden rounded-2xl aspect-[3/4] bg-gradient-to-br from-[#1a0f08] to-[#0d0804]">
+      <div class="absolute inset-0 bg-[url('assets/cat-bags.jpg')] bg-cover bg-center opacity-50 group-hover:opacity-70 group-hover:scale-110 transition-all duration-700"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+      <div class="absolute bottom-0 p-4">
+        <h3 class="font-display text-lg font-semibold">Handbags</h3>
+        <p class="text-xs text-gray-400">From ₹699</p>
+      </div>
+    </a>
+    <a href="products.html?cat=jewellery" class="category-card group relative overflow-hidden rounded-2xl aspect-[3/4] bg-gradient-to-br from-[#1a160a] to-[#0d0b05]">
+      <div class="absolute inset-0 bg-[url('assets/cat-jewellery.jpg')] bg-cover bg-center opacity-50 group-hover:opacity-70 group-hover:scale-110 transition-all duration-700"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+      <div class="absolute bottom-0 p-4">
+        <h3 class="font-display text-lg font-semibold">Jewellery</h3>
+        <p class="text-xs text-gray-400">From ₹299</p>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     FEATURED / NEW ARRIVALS
+═══════════════════════════════════════════════════════ -->
+<section class="py-20 px-4 sm:px-6 max-w-7xl mx-auto">
+  <div class="flex items-end justify-between mb-12">
+    <div>
+      <p class="text-brand-red text-xs tracking-[0.3em] uppercase font-medium mb-3">Just Dropped</p>
+      <h2 class="font-display text-4xl sm:text-5xl font-semibold">New Arrivals</h2>
+    </div>
+    <a href="products.html?sort=new" class="text-sm text-gray-400 hover:text-white transition-colors hidden sm:flex items-center gap-1">
+      View all <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+    </a>
+  </div>
+
+  <div id="new-arrivals" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+    <!-- Products injected by JS -->
+    <div class="product-skeleton rounded-2xl aspect-[3/4] animate-pulse bg-white/5"></div>
+    <div class="product-skeleton rounded-2xl aspect-[3/4] animate-pulse bg-white/5"></div>
+    <div class="product-skeleton rounded-2xl aspect-[3/4] animate-pulse bg-white/5"></div>
+    <div class="product-skeleton rounded-2xl aspect-[3/4] animate-pulse bg-white/5 hidden lg:block"></div>
+  </div>
+
+  <div class="text-center mt-6 sm:hidden">
+    <a href="products.html?sort=new" class="text-sm text-brand-red">View all new arrivals →</a>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     MARQUEE STRIP
+═══════════════════════════════════════════════════════ -->
+<div class="py-4 border-y border-white/5 overflow-hidden">
+  <div class="marquee-track flex items-center gap-12 whitespace-nowrap">
+    <span class="font-accent text-2xl text-brand-red tracking-widest">FASHION HOOD</span>
+    <span class="font-accent text-2xl text-white/20 tracking-widest">✦</span>
+    <span class="font-accent text-2xl text-white/60 tracking-widest">NEW COLLECTION</span>
+    <span class="font-accent text-2xl text-white/20 tracking-widest">✦</span>
+    <span class="font-accent text-2xl text-brand-red tracking-widest">PREMIUM QUALITY</span>
+    <span class="font-accent text-2xl text-white/20 tracking-widest">✦</span>
+    <span class="font-accent text-2xl text-white/60 tracking-widest">FREE SHIPPING</span>
+    <span class="font-accent text-2xl text-white/20 tracking-widest">✦</span>
+    <span class="font-accent text-2xl text-brand-red tracking-widest">FASHION HOOD</span>
+    <span class="font-accent text-2xl text-white/20 tracking-widest">✦</span>
+    <span class="font-accent text-2xl text-white/60 tracking-widest">NEW COLLECTION</span>
+    <span class="font-accent text-2xl text-white/20 tracking-widest">✦</span>
+    <span class="font-accent text-2xl text-brand-red tracking-widest">PREMIUM QUALITY</span>
+    <span class="font-accent text-2xl text-white/20 tracking-widest">✦</span>
+    <span class="font-accent text-2xl text-white/60 tracking-widest">FREE SHIPPING</span>
+    <span class="font-accent text-2xl text-white/20 tracking-widest">✦</span>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════
+     BEST SELLERS
+═══════════════════════════════════════════════════════ -->
+<section class="py-20 px-4 sm:px-6 max-w-7xl mx-auto">
+  <div class="flex items-end justify-between mb-12">
+    <div>
+      <p class="text-brand-red text-xs tracking-[0.3em] uppercase font-medium mb-3">Customer Favourites</p>
+      <h2 class="font-display text-4xl sm:text-5xl font-semibold">Best Sellers</h2>
+    </div>
+    <a href="products.html?sort=bestseller" class="text-sm text-gray-400 hover:text-white transition-colors hidden sm:flex items-center gap-1">
+      View all <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+    </a>
+  </div>
+  <div id="best-sellers" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+    <div class="product-skeleton rounded-2xl aspect-[3/4] animate-pulse bg-white/5"></div>
+    <div class="product-skeleton rounded-2xl aspect-[3/4] animate-pulse bg-white/5"></div>
+    <div class="product-skeleton rounded-2xl aspect-[3/4] animate-pulse bg-white/5"></div>
+    <div class="product-skeleton rounded-2xl aspect-[3/4] animate-pulse bg-white/5 hidden lg:block"></div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     COD BANNER
+═══════════════════════════════════════════════════════ -->
+<section class="px-4 sm:px-6 max-w-7xl mx-auto mb-20">
+  <div class="cod-banner relative overflow-hidden rounded-3xl bg-gradient-to-r from-brand-red-dark via-brand-red to-[#e8385a] p-8 sm:p-12">
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute top-4 right-4 font-accent text-9xl text-white">COD</div>
+    </div>
+    <div class="relative z-10 flex flex-col sm:flex-row items-start sm:items-center gap-6 justify-between">
+      <div>
+        <h3 class="font-display text-3xl sm:text-4xl font-semibold mb-2">Cash On Delivery Available</h3>
+        <p class="text-white/80 text-sm max-w-md">Order confidently. Pay when it arrives. We deliver across India with trusted courier partners.</p>
+      </div>
+      <a href="products.html" class="bg-white text-brand-red font-semibold px-8 py-4 rounded-2xl text-sm whitespace-nowrap hover:bg-brand-cream transition-colors">
+        Shop Now →
+      </a>
+    </div>
+    <div class="flex flex-wrap gap-6 mt-8">
+      <div class="flex items-center gap-2 text-white/90 text-sm">
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"/><path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd"/></svg>
+        Easy Returns
+      </div>
+      <div class="flex items-center gap-2 text-white/90 text-sm">
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"/></svg>
+        Secure Orders
+      </div>
+      <div class="flex items-center gap-2 text-white/90 text-sm">
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M8 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM15 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"/><path d="M3 4a1 1 0 00-1 1v10a1 1 0 001 1h1.05a2.5 2.5 0 014.9 0H10a1 1 0 001-1V5a1 1 0 00-1-1H3zM14 7h2a1 1 0 011 1v6.05A2.5 2.5 0 0114.95 16H14a1 1 0 01-1-1v-5a1 1 0 011-1z"/></svg>
+        Pan India Delivery
+      </div>
+      <div class="flex items-center gap-2 text-white/90 text-sm">
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+        Genuine Products
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     FEATURED EDITORIAL
+═══════════════════════════════════════════════════════ -->
+<section class="py-20 bg-gradient-to-b from-transparent via-[#0f0507] to-transparent">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <div class="order-2 lg:order-1">
+        <p class="text-brand-red text-xs tracking-[0.3em] uppercase font-medium mb-4">Featured</p>
+        <h2 class="font-display text-4xl sm:text-5xl lg:text-6xl font-semibold mb-6 leading-none">
+          The Signature<br/><em>Co-ord Set</em><br/>Collection
+        </h2>
+        <p class="text-gray-400 mb-8 leading-relaxed max-w-md">
+          Effortlessly put together. Matching sets that make every outfit look intentional. From brunch to dinner – look flawless without the guesswork.
+        </p>
+        <div class="flex flex-wrap gap-3 mb-8">
+          <span class="px-4 py-2 rounded-full border border-white/10 text-sm text-gray-300">Statement Prints</span>
+          <span class="px-4 py-2 rounded-full border border-white/10 text-sm text-gray-300">Solid Classics</span>
+          <span class="px-4 py-2 rounded-full border border-white/10 text-sm text-gray-300">Summer Hues</span>
+          <span class="px-4 py-2 rounded-full border border-brand-red/30 text-sm text-brand-red">New Season</span>
+        </div>
+        <a href="products.html?cat=coord-sets" class="btn-red inline-flex items-center gap-2 px-8 py-4 rounded-2xl font-medium text-sm">
+          Explore Co-ords
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
+      </div>
+      <div class="order-1 lg:order-2 relative">
+        <div class="relative aspect-[4/5] rounded-3xl overflow-hidden bg-gradient-to-br from-[#1a0810] to-[#0d0507]">
+          <div class="absolute inset-0 bg-[url('assets/featured-coord.jpg')] bg-cover bg-center opacity-60"></div>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+        </div>
+        <!-- Floating badge -->
+        <div class="absolute -bottom-4 -left-4 glass-card px-6 py-4 rounded-2xl">
+          <p class="text-xs text-gray-400 mb-1">Starting from</p>
+          <p class="font-display text-2xl font-semibold">₹999</p>
+          <p class="text-xs text-brand-red">COD available</p>
+        </div>
+        <!-- Floating rating -->
+        <div class="absolute -top-4 -right-4 glass-card px-4 py-3 rounded-2xl flex items-center gap-2">
+          <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <span class="font-semibold text-sm">4.9</span>
+          <span class="text-xs text-gray-400">(2.4k reviews)</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     REVIEWS
+═══════════════════════════════════════════════════════ -->
+<section class="py-20 px-4 sm:px-6 max-w-7xl mx-auto">
+  <div class="text-center mb-12">
+    <p class="text-brand-red text-xs tracking-[0.3em] uppercase font-medium mb-3">Testimonials</p>
+    <h2 class="font-display text-4xl sm:text-5xl font-semibold mb-2">What Our Girls Say</h2>
+    <div class="flex items-center justify-center gap-1 mt-4">
+      <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+      <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+      <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+      <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+      <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+      <span class="ml-2 text-gray-400 text-sm">4.8 from 2400+ reviews</span>
+    </div>
+  </div>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <!-- Review Cards -->
+    <div class="glass-card p-6 rounded-2xl">
+      <div class="flex gap-1 mb-4">
+        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+      </div>
+      <p class="text-gray-300 text-sm leading-relaxed mb-4">"Ordered the floral co-ord set and honestly it looked even better in person! Quality is amazing and delivery was super fast. Already placed a second order!"</p>
+      <div class="flex items-center gap-3">
+        <div class="w-9 h-9 rounded-full bg-brand-red/20 flex items-center justify-center text-brand-red font-semibold text-sm">P</div>
+        <div>
+          <p class="font-medium text-sm">Priya Sharma</p>
+          <p class="text-xs text-gray-500">Delhi • Verified Buyer</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="glass-card p-6 rounded-2xl">
+      <div class="flex gap-1 mb-4">
+        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+      </div>
+      <p class="text-gray-300 text-sm leading-relaxed mb-4">"Best Indian fashion brand I've found online! The kurti I got was exactly what I expected – beautiful fabric, true to size. Will definitely recommend to friends!"</p>
+      <div class="flex items-center gap-3">
+        <div class="w-9 h-9 rounded-full bg-brand-red/20 flex items-center justify-center text-brand-red font-semibold text-sm">A</div>
+        <div>
+          <p class="font-medium text-sm">Ananya Kapoor</p>
+          <p class="text-xs text-gray-500">Mumbai • Verified Buyer</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="glass-card p-6 rounded-2xl sm:col-span-2 lg:col-span-1">
+      <div class="flex gap-1 mb-4">
+        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+        <svg class="w-4 h-4 text-gray-600" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+      </div>
+      <p class="text-gray-300 text-sm leading-relaxed mb-4">"COD made it easy to try without worry. The handbag is gorgeous – got compliments from literally everyone at college. Worth every rupee!"</p>
+      <div class="flex items-center gap-3">
+        <div class="w-9 h-9 rounded-full bg-brand-red/20 flex items-center justify-center text-brand-red font-semibold text-sm">R</div>
+        <div>
+          <p class="font-medium text-sm">Riya Mehta</p>
+          <p class="text-xs text-gray-500">Bangalore • Verified Buyer</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     NEWSLETTER
+═══════════════════════════════════════════════════════ -->
+<section class="py-20 px-4 sm:px-6">
+  <div class="max-w-2xl mx-auto text-center">
+    <div class="glass-card p-10 sm:p-14 rounded-3xl relative overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-br from-brand-red/5 to-transparent pointer-events-none"></div>
+      <p class="text-brand-red text-xs tracking-[0.3em] uppercase font-medium mb-4">Stay in the Loop</p>
+      <h2 class="font-display text-3xl sm:text-4xl font-semibold mb-3">Get First Access to <em>New Drops</em></h2>
+      <p class="text-gray-400 text-sm mb-8">Join 10,000+ girls who get exclusive sale alerts and new arrivals first.</p>
+      <div class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+        <input id="newsletter-email" type="email" placeholder="Your email address" class="flex-1 bg-white/5 border border-white/10 text-white placeholder-gray-600 px-5 py-3.5 rounded-xl text-sm outline-none focus:border-brand-red transition-colors" />
+        <button onclick="subscribeNewsletter()" class="btn-red px-6 py-3.5 rounded-xl text-sm font-medium whitespace-nowrap">Subscribe ✦</button>
+      </div>
+      <p class="text-xs text-gray-600 mt-4">No spam. Unsubscribe anytime.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════════════════════ -->
+<footer class="border-t border-white/5 pt-16 pb-32 px-4 sm:px-6 sm:pb-16">
+  <div class="max-w-7xl mx-auto">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+      <!-- Brand -->
+      <div class="lg:col-span-1">
+        <div class="flex items-center gap-2 mb-4">
+          <div class="logo-circle w-10 h-10 rounded-full bg-brand-red flex items-center justify-center text-white font-accent text-sm">FH</div>
+          <span class="font-display text-2xl font-semibold">Fashion Hood</span>
+        </div>
+        <p class="text-gray-500 text-sm leading-relaxed mb-6">Premium fashion for the modern Indian girl. Curated with love, delivered with care.</p>
+        <div class="flex gap-4">
+          <a href="#" class="w-9 h-9 rounded-xl bg-white/5 hover:bg-brand-red/20 flex items-center justify-center transition-colors">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a href="#" class="w-9 h-9 rounded-xl bg-white/5 hover:bg-brand-red/20 flex items-center justify-center transition-colors">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.25 8.25 0 004.83 1.56V6.82a4.85 4.85 0 01-1.06-.13z"/></svg>
+          </a>
+          <a href="https://wa.me/919999999999" class="w-9 h-9 rounded-xl bg-white/5 hover:bg-green-600/20 flex items-center justify-center transition-colors">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Shop -->
+      <div>
+        <h4 class="font-semibold text-sm mb-5 tracking-wide">Shop</h4>
+        <ul class="space-y-3">
+          <li><a href="products.html?cat=kurtis" class="text-gray-500 hover:text-white text-sm transition-colors">Kurtis</a></li>
+          <li><a href="products.html?cat=denims" class="text-gray-500 hover:text-white text-sm transition-colors">Denims</a></li>
+          <li><a href="products.html?cat=tops" class="text-gray-500 hover:text-white text-sm transition-colors">Tops</a></li>
+          <li><a href="products.html?cat=coord-sets" class="text-gray-500 hover:text-white text-sm transition-colors">Co-ord Sets</a></li>
+          <li><a href="products.html?cat=handbags" class="text-gray-500 hover:text-white text-sm transition-colors">Handbags</a></li>
+          <li><a href="products.html?cat=jewellery" class="text-gray-500 hover:text-white text-sm transition-colors">Jewellery</a></li>
+          <li><a href="products.html?sale=true" class="text-brand-red text-sm">Sale 🔥</a></li>
+        </ul>
+      </div>
+
+      <!-- Help -->
+      <div>
+        <h4 class="font-semibold text-sm mb-5 tracking-wide">Help</h4>
+        <ul class="space-y-3">
+          <li><a href="faq.html" class="text-gray-500 hover:text-white text-sm transition-colors">FAQs</a></li>
+          <li><a href="shipping.html" class="text-gray-500 hover:text-white text-sm transition-colors">Shipping Policy</a></li>
+          <li><a href="returns.html" class="text-gray-500 hover:text-white text-sm transition-colors">Returns & Exchange</a></li>
+          <li><a href="track.html" class="text-gray-500 hover:text-white text-sm transition-colors">Track Order</a></li>
+          <li><a href="contact.html" class="text-gray-500 hover:text-white text-sm transition-colors">Contact Us</a></li>
+          <li><a href="https://wa.me/919999999999" class="text-gray-500 hover:text-white text-sm transition-colors">WhatsApp Support</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div>
+        <h4 class="font-semibold text-sm mb-5 tracking-wide">Contact</h4>
+        <ul class="space-y-3">
+          <li class="flex items-start gap-2 text-gray-500 text-sm">
+            <svg class="w-4 h-4 mt-0.5 text-brand-red flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+            +91 99999 99999
+          </li>
+          <li class="flex items-start gap-2 text-gray-500 text-sm">
+            <svg class="w-4 h-4 mt-0.5 text-brand-red flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            support@fashionhood.in
+          </li>
+          <li class="text-gray-500 text-sm">10am – 7pm, Mon–Sat</li>
+        </ul>
+        <div class="mt-6 p-4 rounded-xl bg-white/5 border border-white/5">
+          <p class="text-xs text-gray-500 mb-1">Secure Payments</p>
+          <div class="flex gap-2 items-center flex-wrap">
+            <span class="text-xs bg-white/10 px-2 py-1 rounded-lg text-gray-400">Razorpay</span>
+            <span class="text-xs bg-white/10 px-2 py-1 rounded-lg text-gray-400">UPI</span>
+            <span class="text-xs bg-white/10 px-2 py-1 rounded-lg text-gray-400">Cards</span>
+            <span class="text-xs bg-white/10 px-2 py-1 rounded-lg text-gray-400">COD</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="border-t border-white/5 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p class="text-gray-600 text-xs">© 2025 Fashion Hood. All rights reserved.</p>
+      <div class="flex gap-6">
+        <a href="privacy.html" class="text-gray-600 hover:text-gray-400 text-xs transition-colors">Privacy Policy</a>
+        <a href="terms.html" class="text-gray-600 hover:text-gray-400 text-xs transition-colors">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════════════════════════════════════════════════════
+     FLOATING BUTTONS
+═══════════════════════════════════════════════════════ -->
+<!-- WhatsApp -->
+<a href="https://wa.me/919999999999?text=Hi%20Fashion%20Hood!%20I%20have%20a%20query." target="_blank" class="fixed bottom-24 right-4 sm:bottom-8 z-50 w-13 h-13 bg-green-500 hover:bg-green-400 rounded-full flex items-center justify-center shadow-2xl transition-all hover:scale-110 w-12 h-12">
+  <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<!-- ═══════════════════════════════════════════════════════
+     MOBILE BOTTOM NAV
+═══════════════════════════════════════════════════════ -->
+<div class="fixed bottom-0 left-0 right-0 z-50 sm:hidden">
+  <div class="mobile-bottom-nav bg-brand-black/95 backdrop-blur-xl border-t border-white/10 flex items-center justify-around py-3 px-2">
+    <a href="index.html" class="flex flex-col items-center gap-1 text-white">
+      <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/></svg>
+      <span class="text-xs">Home</span>
+    </a>
+    <a href="products.html" class="flex flex-col items-center gap-1 text-gray-500">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 10h16M4 14h16M4 18h16"/></svg>
+      <span class="text-xs">Shop</span>
+    </a>
+    <a href="products.html?sale=true" class="flex flex-col items-center gap-1 text-gray-500">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/></svg>
+      <span class="text-xs">Sale</span>
+    </a>
+    <a href="wishlist.html" class="flex flex-col items-center gap-1 text-gray-500">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"/></svg>
+      <span class="text-xs">Wishlist</span>
+    </a>
+    <a href="cart.html" class="flex flex-col items-center gap-1 text-gray-500 relative">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007z"/></svg>
+      <span id="cart-count-mobile" class="absolute -top-1 -right-1 bg-brand-red text-white text-xs w-3.5 h-3.5 rounded-full flex items-center justify-center font-semibold" style="font-size:9px">0</span>
+      <span class="text-xs">Cart</span>
+    </a>
+  </div>
+</div>
+
+<!-- Toast Notification -->
+<div id="toast" class="fixed top-24 right-4 z-50 hidden">
+  <div class="bg-brand-black border border-white/10 text-white px-5 py-3 rounded-2xl shadow-2xl text-sm flex items-center gap-3">
+    <span class="text-green-400">✓</span>
+    <span id="toast-msg">Added to cart!</span>
+  </div>
+</div>
+
+<!-- Firebase SDKs -->
+<script type="module">
+  import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js';
+  import { getFirestore, collection, getDocs, query, where, orderBy, limit } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js';
+  import { getAuth } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js';
+
+  // ── PASTE YOUR FIREBASE CONFIG HERE ──────────────────────
+  const firebaseConfig = {
+    apiKey: "YOUR_API_KEY",
+    authDomain: "YOUR_PROJECT.firebaseapp.com",
+    projectId: "YOUR_PROJECT_ID",
+    storageBucket: "YOUR_PROJECT.appspot.com",
+    messagingSenderId: "YOUR_SENDER_ID",
+    appId: "YOUR_APP_ID"
+  };
+  // ─────────────────────────────────────────────────────────
+
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+  window._db = db;
+  window._fbModules = { collection, getDocs, query, where, orderBy, limit };
+
+  // Load new arrivals
+  async function loadNewArrivals() {
+    const el = document.getElementById('new-arrivals');
+    try {
+      const q = query(collection(db, 'products'), where('active', '==', true), orderBy('createdAt', 'desc'), limit(4));
+      const snap = await getDocs(q);
+      if (snap.empty) { el.innerHTML = '<p class="col-span-4 text-center text-gray-600 py-12">New arrivals coming soon…</p>'; return; }
+      el.innerHTML = '';
+      snap.forEach(doc => { el.innerHTML += productCard({ id: doc.id, ...doc.data() }); });
+    } catch(e) {
+      el.innerHTML = '<p class="col-span-4 text-center text-gray-600 py-12">Products loading…</p>';
+      console.error(e);
+    }
+  }
+
+  // Load bestsellers
+  async function loadBestSellers() {
+    const el = document.getElementById('best-sellers');
+    try {
+      const q = query(collection(db, 'products'), where('active', '==', true), where('featured', '==', true), limit(4));
+      const snap = await getDocs(q);
+      if (snap.empty) { el.innerHTML = '<p class="col-span-4 text-center text-gray-600 py-12">Best sellers loading…</p>'; return; }
+      el.innerHTML = '';
+      snap.forEach(doc => { el.innerHTML += productCard({ id: doc.id, ...doc.data() }); });
+    } catch(e) {
+      el.innerHTML = '<p class="col-span-4 text-center text-gray-600 py-12">Products loading…</p>';
+    }
+  }
+
+  loadNewArrivals();
+  loadBestSellers();
+</script>
+
+<script src="js/app.js"></script>
+<script src="js/cart.js"></script>
+</body>
+</html>
