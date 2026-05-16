@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en-IN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Orders | Fashion Hood</title>
+    <meta name="description" content="Track recent Fashion Hood orders saved on this device.">
+    <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body class="light-page">
+    <header id="site-header"></header>
+    <main>
+      <section class="page-hero">
+        <div class="container">
+          <span class="eyebrow">Saved on this device</span>
+          <h1 class="section-title mt-4">My recent orders</h1>
+          <div class="summary-card mt-8" id="orders-box"></div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer" id="site-footer"></footer>
+    <a class="whatsapp-float" id="whatsapp-float">WA</a>
+    <nav class="mobile-nav" id="mobile-nav"></nav>
+    <script type="module">
+      import { renderShell } from "./js/utils.js";
+      renderShell("account");
+      const orders = JSON.parse(localStorage.getItem("fashion_hood_orders") || "[]");
+      document.querySelector("#orders-box").innerHTML = orders.length
+        ? orders.map((id) => `<div class="flex justify-between py-3 border-b border-black/10"><strong>${id}</strong><span class="muted">Placed</span></div>`).join("")
+        : `<p class="muted">No local orders yet. Admin can see all orders in Firebase.</p><a class="btn-dark mt-5" href="products/">Shop now</a>`;
+    </script>
+  </body>
+</html>
+
