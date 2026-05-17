@@ -1081,10 +1081,18 @@ textarea {
     right: 14px;
     bottom: 86px;
   }
-}
 html, body {
   overflow-x: hidden;
   max-width: 100%;
+}
+
+.checkout-grid,
+.cart-grid,
+.summary-card,
+.container {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 * {
