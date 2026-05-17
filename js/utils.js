@@ -115,10 +115,10 @@ export function renderShell(active = "home") {
 
   if (mobile) {
     mobile.innerHTML = `
-      ${mobileLink(prefix, "index.html", "⌂", "Home", active === "home")}
-      ${mobileLink(prefix, "products/index.html", "◇", "Shop", active === "shop")}
-      ${mobileLink(prefix, "cart.html", "◒", "Cart", active === "cart")}
-      ${mobileLink(prefix, "account.html", "♡", "Orders", active === "account")}`;
+      ${mobileLink(prefix, "index.html", "🏠", "Home", active === "home")}
+      ${mobileLink(prefix, "products/index.html", "🛍️", "Shop", active === "shop")}
+      ${mobileLink(prefix, "cart.html", "🛒", "Cart", active === "cart")}
+      ${mobileLink(prefix, "account.html", "📦", "Orders", active === "account")}`;
   }
 
   if (whatsapp) {
