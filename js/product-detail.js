@@ -38,11 +38,8 @@ if (!product) {
         <button class="btn-primary" id="add-cart">Add to cart</button>
         <button class="btn-dark" onclick="buyNow()">Checkout</button>
       </div> 
-      <script>
-document.getElementById("buy-now")?.addEventListener("click", () => {
-  const cart = JSON.parse(localStorage.getItem("fashion_hood_cart") || "[]");
-
-  cart.length = 0;
+      window.buyNow = function () {
+  const cart = [];
 
   cart.push({
     id: product.id,
@@ -55,8 +52,7 @@ document.getElementById("buy-now")?.addEventListener("click", () => {
   localStorage.setItem("fashion_hood_cart", JSON.stringify(cart));
 
   window.location.href = "../checkout.html";
-});
-</script>
+};
       <div class="mt-5 text-sm muted">COD available · WhatsApp support · Stock: ${product.stock ?? "Live"}</div>
     </div>`;
 
