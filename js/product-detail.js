@@ -36,7 +36,7 @@ if (!product) {
       </div>
       <div class="mt-6 grid grid-cols-2 gap-3">
         <button class="btn-primary" id="add-cart">Add to cart</button>
-        <button class="btn-dark" id="buy-now">Checkout</button>
+        <button class="btn-dark" onclick="buyNow()">Checkout</button>
       </div> 
       <script>
 document.getElementById("buy-now")?.addEventListener("click", () => {
