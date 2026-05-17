@@ -69,8 +69,7 @@ export function renderShell(active = "home") {
           ${navLink(prefix, "products/index.html?tag=new-arrival", "New In", false)}
           ${navLink(prefix, "products/index.html?tag=best-seller", "Best Sellers", false)}
           ${navLink(prefix, "cart.html", "Cart", active === "cart")}
-          ${navLink(prefix, "admin/login.html", "Admin", active === "admin")}
-        </div>
+      </div>
       </nav>`;
   }
 
