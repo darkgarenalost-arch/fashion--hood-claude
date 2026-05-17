@@ -36,8 +36,25 @@ if (!product) {
       </div>
       <div class="mt-6 grid grid-cols-2 gap-3">
         <button class="btn-primary" id="add-cart">Add to cart</button>
-        <a class="btn-dark" href="../checkout.html">Checkout</a>
-      </div>
+        <button class="btn-dark" id="buy-now">Checkout</button>
+      </div> 
+      document.getElementById("buy-now")?.addEventListener("click", () => {
+  const cart = JSON.parse(localStorage.getItem("fashion_hood_cart") || "[]");
+
+  cart.length = 0;
+
+  cart.push({
+    id: product.id,
+    name: product.name,
+    price: product.salePrice || product.price,
+    image: product.images?.[0] || "",
+    quantity: 1
+  });
+
+  localStorage.setItem("fashion_hood_cart", JSON.stringify(cart));
+
+  window.location.href = "../checkout.html";
+});
       <div class="mt-5 text-sm muted">COD available · WhatsApp support · Stock: ${product.stock ?? "Live"}</div>
     </div>`;
 
