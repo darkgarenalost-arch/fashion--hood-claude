@@ -35,8 +35,8 @@ if (!product) {
         <div class="option-row">${(product.colors || ["Default"]).map((color, index) => option("color", color, index === 0)).join("")}</div>
       </div>
       <div class="mt-6 grid grid-cols-2 gap-3">
-        <button class="btn-primary" id="add-cart">Add to cart</button>
-      <button class="btn-dark" onclick="buyNow()">Checkout</button>
+        <button class="btn-primary" id="add-cart">Add to Cart</button>
+      <button class="btn-dark" onclick="buyNow()">Buy Now</button>
       </div> 
       <div class="mt-5 text-sm muted">COD available · WhatsApp support · Stock: ${product.stock ?? "Live"}</div>
     </div>`; 
