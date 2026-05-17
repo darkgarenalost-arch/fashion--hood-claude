@@ -78,7 +78,7 @@ document.querySelectorAll("[data-remove]").forEach((button) => {
   });
 });
 
-function line(label, value, strong = false) {
+} function line(label, value, strong = false) {
   return `<div class="flex justify-between py-3 border-b border-black/10 ${strong ? "font-black text-xl" : ""}"><span>${label}</span><span>${value}</span></div>`;
 }
 
