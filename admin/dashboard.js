@@ -224,7 +224,11 @@ async function refreshBanners() {
 
 function openProductModal(product = null) {
   const form = $("#product-form");
+
   form.reset();
+
+  form.elements.id.value = "";
+
   if (product) {
     form.elements.id.value = product.id;
     form.elements.name.value = product.name || "";
