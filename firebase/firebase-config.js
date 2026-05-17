@@ -4,23 +4,24 @@ import { getFirestore } from "https://www.gstatic.com/firebasejs/12.7.0/firebase
 import { getStorage } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-storage.js";
 
 export const firebaseConfig = {
-  apiKey: "YOUR_FIREBASE_API_KEY",
-  authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_PROJECT_ID.appspot.com",
-  messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-  appId: "YOUR_FIREBASE_APP_ID"
+  apiKey: "AIzaSyCsN5GEgAPT58oPgny9YhYrcPYS9glGl4M",
+  authDomain: "fashion-hood.firebaseapp.com",
+  projectId: "fashion-hood",
+  storageBucket: "fashion-hood.firebasestorage.app",
+  messagingSenderId: "865023154240",
+  appId: "1:865023154240:web:0822a34de176e47072e7a5",
+  measurementId: "G-SQK00FKELK"
 };
 
 export const brandConfig = {
   brandName: "Fashion Hood",
-  supportPhone: "919999999999",
-  supportEmail: "support@fashionhood.in",
-  instagramUrl: "https://www.instagram.com/",
-  razorpayKeyId: "rzp_test_YOUR_KEY_ID",
+  supportPhone: "918275872736",
+  supportEmail: "fashionhood15@gmail.com",
+  instagramUrl: "https://www.instagram.com/fashion_hood.official/",
+  razorpayKeyId: "rzp_test_SkrMk3QzxEwhXD",
   currency: "INR",
-  freeShippingAbove: 1499,
-  standardShipping: 79,
+  freeShippingAbove: 0,
+  standardShipping: 0,
   codFee: 0,
   adminUids: [
     "PASTE_FIREBASE_ADMIN_UID_HERE"
