@@ -24,7 +24,7 @@ export const brandConfig = {
   standardShipping: 0,
   codFee: 0,
   adminUids: [
-    "PASTE_FIREBASE_ADMIN_UID_HERE"
+    "YDcQ1GjP1ib6SottudJIuMIEonY2"
   ]
 };
 
