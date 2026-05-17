@@ -69,7 +69,8 @@ export function renderShell(active = "home") {
           ${navLink(prefix, "products/index.html?tag=new-arrival", "New In", false)}
           ${navLink(prefix, "products/index.html?tag=best-seller", "Best Sellers", false)}
           ${navLink(prefix, "cart.html", "Cart", active === "cart")}
-      </div>
+          ${navLink(prefix, "admin/login.html", "Admin", active === "admin")}
+        </div>
       </nav>`;
   }
 
@@ -114,11 +115,10 @@ export function renderShell(active = "home") {
 
   if (mobile) {
     mobile.innerHTML = `
-      if (mobile) { mobile.innerHTML = 
-      ${mobileLink(prefix, "index.html", "⌂", "Home", active === "home")} 
+      ${mobileLink(prefix, "index.html", "⌂", "Home", active === "home")}
       ${mobileLink(prefix, "products/index.html", "◇", "Shop", active === "shop")}
-      ${mobileLink(prefix, "cart.html", "◒", "Cart", active === "cart")} 
-      ${mobileLink(prefix, "account.html", "♡", "Orders", active === "account")};
+      ${mobileLink(prefix, "cart.html", "◒", "Cart", active === "cart")}
+      ${mobileLink(prefix, "account.html", "♡", "Orders", active === "account")}`;
   }
 
   if (whatsapp) {
