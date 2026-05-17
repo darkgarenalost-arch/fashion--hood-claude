@@ -38,7 +38,8 @@ if (!product) {
         <button class="btn-primary" id="add-cart">Add to cart</button>
         <button class="btn-dark" id="buy-now">Checkout</button>
       </div> 
-      document.getElementById("buy-now")?.addEventListener("click", () => {
+      <script>
+document.getElementById("buy-now")?.addEventListener("click", () => {
   const cart = JSON.parse(localStorage.getItem("fashion_hood_cart") || "[]");
 
   cart.length = 0;
@@ -55,6 +56,7 @@ if (!product) {
 
   window.location.href = "../checkout.html";
 });
+</script>
       <div class="mt-5 text-sm muted">COD available · WhatsApp support · Stock: ${product.stock ?? "Live"}</div>
     </div>`;
 
