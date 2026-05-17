@@ -42,17 +42,41 @@ function renderCart() {
     <a class="btn-soft w-full mt-3" href="products/">Continue shopping</a>
   `;
 
-  document.querySelectorAll("[data-inc]").forEach((button) => button.addEventListener("click", () => {
-    const item = cart.find((entry) => entry.key === button.dataset.inc);
+  document.querySelectorAll("[data-inc]").forEach((button) => {
+  button.addEventListener("click", () => {
+    const key = String(button.dataset.inc);
+
+    const item = cart.find((entry) => String(entry.key) === key);
+
+    if (!item) return;
+
     updateQuantity(item.key, item.quantity + 1);
-  }));
-  document.querySelectorAll("[data-dec]").forEach((button) => button.addEventListener("click", () => {
-    const item = cart.find((entry) => entry.key === button.dataset.dec);
-    if (item.quantity === 1) removeFromCart(item.key);
-    else updateQuantity(item.key, item.quantity - 1);
-  }));
-  document.querySelectorAll("[data-remove]").forEach((button) => button.addEventListener("click", () => removeFromCart(button.dataset.remove)));
-}
+  });
+});
+
+document.querySelectorAll("[data-dec]").forEach((button) => {
+  button.addEventListener("click", () => {
+    const key = String(button.dataset.dec);
+
+    const item = cart.find((entry) => String(entry.key) === key);
+
+    if (!item) return;
+
+    if (item.quantity <= 1) {
+      removeFromCart(item.key);
+    } else {
+      updateQuantity(item.key, item.quantity - 1);
+    }
+  });
+});
+
+document.querySelectorAll("[data-remove]").forEach((button) => {
+  button.addEventListener("click", () => {
+    const key = String(button.dataset.remove);
+
+    removeFromCart(key);
+  });
+});
 
 function line(label, value, strong = false) {
   return `<div class="flex justify-between py-3 border-b border-black/10 ${strong ? "font-black text-xl" : ""}"><span>${label}</span><span>${value}</span></div>`;
