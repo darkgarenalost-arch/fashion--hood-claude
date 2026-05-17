@@ -36,9 +36,11 @@ if (!product) {
       </div>
       <div class="mt-6 grid grid-cols-2 gap-3">
         <button class="btn-primary" id="add-cart">Add to cart</button>
-        <button class="btn-dark" onclick="buyNow()">Checkout</button>
+      <button class="btn-dark" onclick="buyNow()">Checkout</button>
       </div> 
-      window.buyNow = function () {
+      <div class="mt-5 text-sm muted">COD available · WhatsApp support · Stock: ${product.stock ?? "Live"}</div>
+    </div>`; 
+  window.buyNow = function () {
   const cart = [];
 
   cart.push({
@@ -53,8 +55,6 @@ if (!product) {
 
   window.location.href = "../checkout.html";
 };
-      <div class="mt-5 text-sm muted">COD available · WhatsApp support · Stock: ${product.stock ?? "Live"}</div>
-    </div>`;
 
   root.querySelectorAll(".thumb-row button").forEach((button) => {
     button.addEventListener("click", () => {
