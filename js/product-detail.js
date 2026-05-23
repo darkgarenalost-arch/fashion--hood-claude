@@ -68,7 +68,9 @@ if (!product) {
     const size = root.querySelector("input[name=size]:checked")?.value;
     const color = root.querySelector("input[name=color]:checked")?.value;
     addToCart(product, { size, color, quantity: 1 }); 
-    fbq('track', 'AddToCart');
+   if (typeof fbq !== "undefined") {
+  fbq('track', 'AddToCart');
+}
   });
 }
 
